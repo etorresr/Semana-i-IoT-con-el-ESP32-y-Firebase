@@ -9,7 +9,6 @@ def on_message(client, userdata, msg):
 client = paho.Client()
 client.on_subscribe = on_subscribe
 client.on_message = on_message
-#client.username_pw_set("etorresr", "G4t0")
 client.connect("broker.mqttdashboard.com", 1883)
 client.subscribe("encyclopedia/temperature", qos=1)
 
